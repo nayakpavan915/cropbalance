@@ -1,0 +1,343 @@
+/* ---------- Base look ---------- */
+:root {
+  --bg: #f1f8f2;
+  --line: #bfdcc7;
+  --shadow: 0 4px 14px rgba(20, 83, 45, 0.14);
+  background: var(--bg);
+}
+
+body {
+  background: var(--bg);
+}
+
+/* ---------- Hero header (Login, Register, Harvest plan) ---------- */
+.hero {
+  background: linear-gradient(160deg, var(--green-900) 0%, var(--green-700) 100%);
+  color: #ffffff;
+  text-align: center;
+  padding: 2.5rem 1rem 5rem;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: 2rem;
+  color: #ffffff;
+}
+
+.hero p {
+  margin: 0.25rem 0 0;
+  color: var(--green-100);
+}
+
+.hero-logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 76px;
+  height: 76px;
+  margin-bottom: 0.75rem;
+  border-radius: 50%;
+  background: #ffffff;
+  color: var(--green-900);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+}
+
+.hero-compact {
+  text-align: left;
+  padding: 0.75rem 1rem 4.5rem;
+}
+
+.hero-inner {
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+.hero-compact h1 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.8rem;
+}
+
+.hero-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 44px;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* ---------- Cards ---------- */
+.card {
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  padding: 1.25rem;
+}
+
+.auth-card {
+  width: calc(100% - 2rem);
+  max-width: 440px;
+  margin: -3.5rem auto 2rem;
+}
+
+.card-title {
+  margin: 0 0 1rem;
+  font-size: 1.3rem;
+  color: var(--green-900);
+}
+
+/* ---------- Plain page layout (Dashboard) ---------- */
+.auth-page {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.auth-page h1 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--green-900);
+  margin-bottom: 0.25rem;
+}
+
+.auth-page .subtitle {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+/* ---------- Form fields ---------- */
+.field {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.field span {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.field input,
+.field select,
+.input-wrap input,
+.input-wrap select {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: 2px solid var(--ink);
+  border-radius: 10px;
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.field input:focus,
+.field select:focus,
+.input-wrap input:focus,
+.input-wrap select:focus {
+  border-color: var(--green-700);
+  box-shadow: 0 0 0 3px rgba(27, 127, 59, 0.28);
+}
+
+.input-wrap {
+  position: relative;
+}
+
+.input-wrap .input-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--green-900);
+  pointer-events: none;
+}
+
+.input-wrap input,
+.input-wrap select {
+  padding-left: 44px;
+}
+
+.input-wrap.has-toggle input {
+  padding-right: 52px;
+}
+
+.toggle-pw {
+  position: absolute;
+  right: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 40px;
+  border: 0;
+  background: transparent;
+  color: var(--green-900);
+  cursor: pointer;
+}
+
+/* ---------- Buttons ---------- */
+.btn-primary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border: 0;
+  border-radius: 12px;
+  background: linear-gradient(160deg, var(--green-700), var(--green-900));
+  color: #ffffff;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 3px 8px rgba(20, 83, 45, 0.35);
+}
+
+.btn-primary:active {
+  transform: translateY(1px);
+  box-shadow: 0 1px 3px rgba(20, 83, 45, 0.35);
+}
+
+.btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-secondary {
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--green-900);
+  border-radius: 10px;
+  background: var(--paper);
+  color: var(--green-900);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.form-error {
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  background: var(--alert-red);
+  color: #ffffff;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.auth-switch {
+  margin: 1.25rem 0 0;
+  text-align: center;
+}
+
+.auth-switch a {
+  color: var(--green-900);
+  font-weight: 700;
+}
+
+/* ---------- Harvest Intent form ---------- */
+.page-wide {
+  max-width: 560px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 3rem;
+}
+
+.page-wide.pull-up {
+  margin-top: -3.25rem;
+  padding-top: 0;
+}
+
+.page-wide h1 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--green-900);
+  margin: 0 0 0.25rem;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 1rem;
+  color: var(--green-900);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.step-card {
+  margin-bottom: 1rem;
+}
+
+.step-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 0.9rem;
+  font-size: 1.1rem;
+  color: var(--green-900);
+}
+
+.step-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--green-900);
+  color: #ffffff;
+  font-weight: 800;
+}
+
+.group-label {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.acre-display {
+  margin: 0 0 0.75rem;
+  text-align: center;
+}
+
+.acre-big {
+  margin: 0;
+  font-size: 2.4rem;
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--green-900);
+}
+
+.acre-unit {
+  margin-left: 6px;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.acre-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.acre-row .btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  min-width: 52px;
+  height: 52px;
+  padding: 0;
+  border-radius: 50%;
+}
+
+.acre-row input[type="range"] {
+  flex: 1;
+  accent-color: var(--green-900);
